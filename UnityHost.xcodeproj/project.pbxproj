@@ -16,9 +16,10 @@
 		A29E1BE52721251800969C4E /* UnityHostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E1BE42721251800969C4E /* UnityHostUITests.swift */; };
 		A29E1BE72721251800969C4E /* UnityHostUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E1BE62721251800969C4E /* UnityHostUITestsLaunchTests.swift */; };
 		A29E1BF6272125E400969C4E /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A29E1BF4272125E400969C4E /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A29E1BF9272125FC00969C4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E1BF8272125FC00969C4E /* ContentView.swift */; };
 		A29E1BFB2721266100969C4E /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E1BFA2721266100969C4E /* Unity.swift */; };
 		A29E1C022721330900969C4E /* AVProVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A29E1C002721330900969C4E /* AVProVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2D04B3A27217C1A0092C793 /* MessageDeliver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D04B3927217C1A0092C793 /* MessageDeliver.swift */; };
+		A2D04B3F2722B89D0092C793 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D04B3E2722B89D0092C793 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +68,12 @@
 		A29E1BE42721251800969C4E /* UnityHostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityHostUITests.swift; sourceTree = "<group>"; };
 		A29E1BE62721251800969C4E /* UnityHostUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityHostUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A29E1BF4272125E400969C4E /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A29E1BF8272125FC00969C4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A29E1BFA2721266100969C4E /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
 		A29E1BFD272129C600969C4E /* AVProVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVProVideo.framework; path = ../UnityProject/Frameworks/AVProVideo/Runtime/Plugins/iOS/AVProVideo.framework; sourceTree = "<group>"; };
 		A29E1C002721330900969C4E /* AVProVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVProVideo.framework; path = ../UnityProject/Frameworks/3DParty/AVProVideo/Runtime/Plugins/iOS/AVProVideo.framework; sourceTree = "<group>"; };
+		A2D04B35272179EA0092C793 /* UnityHost-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnityHost-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2D04B3927217C1A0092C793 /* MessageDeliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDeliver.swift; sourceTree = "<group>"; };
+		A2D04B3E2722B89D0092C793 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,14 +125,16 @@
 		A29E1BC22721251500969C4E /* UnityHost */ = {
 			isa = PBXGroup;
 			children = (
+				A2D04B3D2722B88D0092C793 /* Views */,
 				A29E1BC32721251500969C4E /* AppDelegate.swift */,
 				A29E1BC72721251500969C4E /* ViewController.swift */,
+				A2D04B3927217C1A0092C793 /* MessageDeliver.swift */,
 				A29E1BFA2721266100969C4E /* Unity.swift */,
-				A29E1BF8272125FC00969C4E /* ContentView.swift */,
 				A29E1BC92721251500969C4E /* Main.storyboard */,
 				A29E1BCC2721251800969C4E /* Assets.xcassets */,
 				A29E1BCE2721251800969C4E /* LaunchScreen.storyboard */,
 				A29E1BD12721251800969C4E /* Info.plist */,
+				A2D04B35272179EA0092C793 /* UnityHost-Bridging-Header.h */,
 			);
 			path = UnityHost;
 			sourceTree = "<group>";
@@ -159,6 +164,14 @@
 				A29E1BF4272125E400969C4E /* UnityFramework.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2D04B3D2722B88D0092C793 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2D04B3E2722B89D0092C793 /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +243,7 @@
 				TargetAttributes = {
 					A29E1BBF2721251500969C4E = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					A29E1BD52721251800969C4E = {
 						CreatedOnToolsVersion = 13.0;
@@ -295,8 +309,9 @@
 			files = (
 				A29E1BC82721251500969C4E /* ViewController.swift in Sources */,
 				A29E1BC42721251500969C4E /* AppDelegate.swift in Sources */,
-				A29E1BF9272125FC00969C4E /* ContentView.swift in Sources */,
 				A29E1BFB2721266100969C4E /* Unity.swift in Sources */,
+				A2D04B3F2722B89D0092C793 /* MainView.swift in Sources */,
+				A2D04B3A27217C1A0092C793 /* MessageDeliver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XNYYJC5N2;
@@ -492,6 +508,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.roobo.demo.host.UnityHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UnityHost/UnityHost-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XNYYJC5N2;
@@ -521,6 +540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.roobo.demo.host.UnityHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UnityHost/UnityHost-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

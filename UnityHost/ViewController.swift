@@ -9,20 +9,23 @@ import UIKit
 import SwiftUI
 
 class ViewController: UIViewController {
+    
+    let v = MessageDeliver()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc = UIHostingController(rootView: ContentView())
+        addSwiftUIMainView()
         
+    }
+    
+    
+    func addSwiftUIMainView() {
+        let vc = UIHostingController(rootView: MainView())
         addChild(vc)
-        
-        vc.view.frame = view.frame
-        
+        vc.view.frame = self.view.frame
         view.addSubview(vc.view)
-        
         vc.didMove(toParent: self)
-
 
     }
 
